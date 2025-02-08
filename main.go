@@ -23,21 +23,21 @@ type ApiForkee struct {
 }
 
 type ApiPayload struct {
-	Ref string `json:"ref"`
-	RefType string `json:"ref_type"`
+	Ref     string      `json:"ref"`
+	RefType string      `json:"ref_type"`
 	Commits []ApiCommit `json:"commits"`
-	Forkee ApiForkee `json:"forkee"`
-	Action string `json:"action"`
-	Member string `json:"member"`
-	Number int `json:"number"`
+	Forkee  ApiForkee   `json:"forkee"`
+	Action  string      `json:"action"`
+	Member  string      `json:"member"`
+	Number  int         `json:"number"`
 }
 
 type ApiEvent struct {
-	ID string `json:"id"`
-	Type string `json:"type"`
-	Repo ApiRepo `json:"repo"`
-	Payload ApiPayload `json:"payload"`
-	CreatedAt string `json:"created_at"`
+	ID        string     `json:"id"`
+	Type      string     `json:"type"`
+	Repo      ApiRepo    `json:"repo"`
+	Payload   ApiPayload `json:"payload"`
+	CreatedAt string     `json:"created_at"`
 }
 
 func main() {
